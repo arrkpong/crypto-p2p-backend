@@ -55,27 +55,27 @@ npm start
 - เซิร์ฟเวอร์จะรันที่ http://localhost:3000
 
 ## API Endpoints
-- 1. Authentication
+1. Authentication
  ```
 | Method | URL                  | Description         | Request Body Example                                                          |
 | ------ | -------------------- | ------------------- | ----------------------------------------------------------------------------- |
 | POST   | `/api/auth/register` | สมัครสมาชิก           | `{ "username": "alice", "email": "alice@example.com", "password": "123456" }` |
 | POST   | `/api/auth/login`    | เข้าสู่ระบบ รับ JWT      | `{ "username": "alice", "password": "123456" }`                               |
 ```
-- 2. Wallets
+2. Wallets
 ```
 | Method | URL                    | Description              |
 | ------ | ---------------------- | ------------------------ |
 | GET    | `/api/wallets/:userId` | ดูข้อมูลกระเป๋าของผู้ใช้        |
 ```
-- 3. Trades (Orders)
+3. Trades (Orders)
 ```
 | Method | URL           | Description                   | Request Body Example                                                                |
 | ------ | ------------- | ----------------------------- | ----------------------------------------------------------------------------------- |
 | GET    | `/api/trades` | ดูรายการคำสั่งซื้อ-ขายทั้งหมด        | —                                                                                   |
 | POST   | `/api/trades` | สร้างคำสั่งซื้อหรือขาย              | `{ "userId": 1, "type": "SELL", "currency": "BTC", "amount": 1, "price": 1200000 }` |
 ```
-- 4. Transactions (โอนเหรียญ)
+4. Transactions (โอนเหรียญ)
 ```
 | Method | URL                         | Description            | Request Body Example                                                                      |
 | ------ | --------------------------- | ---------------------- | ----------------------------------------------------------------------------------------- |
