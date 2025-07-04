@@ -59,26 +59,26 @@ npm start
  ```
 | Method | URL                  | Description         | Request Body Example                                                          |
 | ------ | -------------------- | ------------------- | ----------------------------------------------------------------------------- |
-| POST   | `/api/auth/register` | สมัครสมาชิก         | `{ "username": "alice", "email": "alice@example.com", "password": "123456" }` |
-| POST   | `/api/auth/login`    | เข้าสู่ระบบ รับ JWT | `{ "username": "alice", "password": "123456" }`                               |
+| POST   | `/api/auth/register` | สมัครสมาชิก           | `{ "username": "alice", "email": "alice@example.com", "password": "123456" }` |
+| POST   | `/api/auth/login`    | เข้าสู่ระบบ รับ JWT      | `{ "username": "alice", "password": "123456" }`                               |
 ```
 - 2. Wallets
 ```
 | Method | URL                    | Description              |
 | ------ | ---------------------- | ------------------------ |
-| GET    | `/api/wallets/:userId` | ดูข้อมูลกระเป๋าของผู้ใช้ |
+| GET    | `/api/wallets/:userId` | ดูข้อมูลกระเป๋าของผู้ใช้        |
 ```
 - 3. Trades (Orders)
 ```
 | Method | URL           | Description                   | Request Body Example                                                                |
 | ------ | ------------- | ----------------------------- | ----------------------------------------------------------------------------------- |
-| GET    | `/api/trades` | ดูรายการคำสั่งซื้อ-ขายทั้งหมด | —                                                                                   |
-| POST   | `/api/trades` | สร้างคำสั่งซื้อหรือขาย        | `{ "userId": 1, "type": "SELL", "currency": "BTC", "amount": 1, "price": 1200000 }` |
+| GET    | `/api/trades` | ดูรายการคำสั่งซื้อ-ขายทั้งหมด        | —                                                                                   |
+| POST   | `/api/trades` | สร้างคำสั่งซื้อหรือขาย              | `{ "userId": 1, "type": "SELL", "currency": "BTC", "amount": 1, "price": 1200000 }` |
 ```
 - 4. Transactions (โอนเหรียญ)
 ```
 | Method | URL                         | Description            | Request Body Example                                                                      |
 | ------ | --------------------------- | ---------------------- | ----------------------------------------------------------------------------------------- |
-| GET    | `/api/transactions/:userId` | ดูประวัติธุรกรรมผู้ใช้ | —                                                                                         |
-| POST   | `/api/transactions`         | สร้างรายการโอนเหรียญ   | `{ "senderId": 1, "receiverId": 2, "currency": "BTC", "amount": 0.5, "external": false }` |
+| GET    | `/api/transactions/:userId` | ดูประวัติธุรกรรมผู้ใช้         | —                                                                                         |
+| POST   | `/api/transactions`         | สร้างรายการโอนเหรียญ      | `{ "senderId": 1, "receiverId": 2, "currency": "BTC", "amount": 0.5, "external": false }` |
 ```
